@@ -3,3 +3,9 @@ config BR2_PACKAGE_THINGYJP_OTA
 	select BR2_PACKAGE_JSON_GLIB
 	help
 	  OTA for Linux based things
+
+config BR_PACKAGE_THINGYJP_OTA_KEYSDIR
+	string "thingyjp-ota-keysdir"
+	depends on BR2_PACKAGE_THINGYJP_OTA
+	help
+	  Location of directory that contains your public key
