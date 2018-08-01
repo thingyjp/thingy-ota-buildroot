@@ -4,8 +4,18 @@ config BR2_PACKAGE_THINGYJP_OTA
 	help
 	  OTA for Linux based things
 
-config BR_PACKAGE_THINGYJP_OTA_KEYSDIR
-	string "thingyjp-ota-keysdir"
+config BR2_PACKAGE_THINGYJP_OTA_REPODIR
+	string "repo directory"
+	depends on BR2_PACKAGE_THINGYJP_OTA
+	help
+	  Location of directory that contains your repo
+
+config BR2_PACKAGE_THINGYJP_OTA_KEYSDIR
+	string "keys directory"
 	depends on BR2_PACKAGE_THINGYJP_OTA
 	help
 	  Location of directory that contains your public key
+
+config BR2_PACKAGE_THINGYJP_OTA_STAMP
+	bool "stamp image"
+	depends on BR2_PACKAGE_THINGYJP_OTA
